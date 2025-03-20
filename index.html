@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // Basic Level
+
+// Task 1: Convert to Uppercase
+function toUpperCase(str) {
+    return str.toUpperCase();
+}
+console.log("Task 1:", toUpperCase("hello world")); // Output: HELLO WORLD
+
+// Task 2: Convert to Lowercase
+function toLowerCase(str) {
+    return str.toLowerCase();
+}
+console.log("Task 2:", toLowerCase("HELLO WORLD")); // Output: hello world
+
+// Task 3: Reverse a String
+function reverseString(str) {
+    return str.split("").reverse().join("");
+}
+console.log("Task 3:", reverseString("hello")); // Output: olleh
+
+// Task 4: Count the number of vowels in a string
+function countVowels(str) {
+    let matches = str.match(/[aeiouAEIOU]/g);
+    return matches ? matches.length : 0;
+}
+console.log("Task 4:", countVowels("hello world")); // Output: 3
+
+// Advanced Level
+
+// Task 1: Username Validation
+function validateUsername(username) {
+    if (username.length >= 5 && username.length <= 15) {
+        return "Valid username";
+    } else {
+        return "Invalid username";
+    }
+}
+console.log("Advanced Task 1:", validateUsername("user123")); // Output: Valid username
+console.log("Advanced Task 1:", validateUsername("us")); // Output: Invalid username
+
+// Task 2: Email Formatter
+function formatEmail(firstName, lastName) {
+    return firstName.toLowerCase() + "." + lastName.toLowerCase() + "@gmail.com";
+}
+console.log("Advanced Task 2:", formatEmail("Jenny", "Joy")); // Output: jenny.joy@gmail.com
+
+// Task 3: Word Counter
+function wordCounter(sentence) {
+    return sentence.split(" ").length;
+}
+console.log("Advanced Task 3:", wordCounter("Hello world this is JavaScript")); // Output: 5
+
+// Task 4: Palindrome Checker
+function isPalindrome(str) {
+    let reversed = str.split("").reverse().join("");
+    return str === reversed ? "It is a palindrome" : "Not a palindrome";
+}
+console.log("Advanced Task 4:", isPalindrome("dad")); // Output: It is a palindrome
+console.log("Advanced Task 4:", isPalindrome("john")); // Output: Not a palindrome
+
+    </script>
+</body>
+</html>
